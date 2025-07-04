@@ -98,11 +98,6 @@ ai-careerpath/
 - **Configure Inngest tasks** in `/lib/inngest/function.js`.
 - **Edit themes/components** using Tailwind and Shadcn in `/components/ui/`.
 
-## 📸 Screenshots
-
-| Resume Builder | AI Cover Letter | Trend Analysis |
-|----------------|------------------|----------------|
-| ![resume](https://via.placeholder.com/200x120) | ![cover](https://via.placeholder.com/200x120) | ![chart](https://via.placeholder.com/200x120) |
 
 ## 🔐 License
 
