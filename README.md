@@ -1,29 +1,110 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+#  AI-CareerPath — AI-Powered Career Platform  
+**Live Demo:** [ai-careerpath.vercel.app](https://ai-careerpath.vercel.app)  
+**GitHub:** [poojakumari27/ai-careerpath](https://github.com/poojakumari27/ai-careerpath)
 
-## Getting Started
+## 🚀 Overview
 
-First, run the development server:
+**AI-CareerPath** is a full-stack AI-powered career platform that helps users build resumes, generate cover letters, and prepare for interviews — all tailored to their target roles. It integrates modern AI tools like **Gemini API** and **Inngest** to provide personalized insights and automate content creation.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+This project was inspired by [this walkthrough](https://youtu.be/UbXpRv5ApKA?si=EVvNWi9AdCD9T8RL) and expanded with custom features for enhanced career planning.
+
+## ✨ Features
+
+- 📝 **Resume Builder**: Create professional resumes using dynamic markdown + form builder.
+- 📨 **AI Cover Letter Generator**: Generate job-specific cover letters with custom prompts.
+- 🎯 **Interview Prep & Insights**: Get tailored questions and insights based on job title.
+- ⚡ **AI Automation**: Gemini + Inngest power automatic content generation and scheduling.
+- 📊 **Skill Gap Analysis**: Highlights required skills based on job market trends.
+- 🎨 **Modern UI**: Designed with **Tailwind CSS** and **Shadcn** components.
+- 🔐 **Authentication**: Secured using **Clerk**.
+
+🧠 How It Works
+Users input their contact information, professional summary, work history, education, skills, and projects.
+
+The app dynamically compiles this data into a clean Markdown-based resume that can be previewed or downloaded as a polished PDF.
+
+For any job title and company, users can generate personalized AI-powered cover letters using Gemini.
+
+Interview preparation tools provide tailored, AI-generated interview questions based on the user's experience and the job role selected, helping users get job-ready.
+
+Inngest handles background tasks like scheduling skill assessment events and tracking progress.
+
+Gemini AI powers real-time insights such as:
+
+Industry trends
+
+Skill gap analysis
+
+
+## 🧰 Tech Stack
+
+| Frontend | Backend | AI & Tools | Database | Auth |
+|----------|---------|-------------|----------|------|
+| Next.js 15 | Inngest | Gemini API (Google AI) | Prisma + NeonDB | Clerk |
+| React 19  | Vercel Functions | Markdown Editor | PlanetScale-ready | Clerk UI |
+| Tailwind CSS | Server Actions | html2pdf.js | | |
+
+## 🗂️ File Structure Highlights
+
+```
+ai-careerpath/
+├── app/
+│   ├── resume/               # Resume builder pages & components
+│   ├── ai-cover-letter/      # Cover letter generation pages
+│   ├── lib/                  # Helpers, schemas, and inngest clients
+├── components/               # UI components (Button, Tabs, Inputs, etc.)
+├── public/                   # Static assets
+├── prisma/                   # Prisma schema and seed data
+├── styles/                   # Global and tailwind styles
+├── .env                      # Environment variables
+├── README.md                 # You're reading it :)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ⚙️ Setup Instructions
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+1. **Clone the repo**
+   ```bash
+   git clone https://github.com/poojakumari27/ai-careerpath
+   cd ai-careerpath
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
+3. **Set up `.env` file**
+   ```env
+   DATABASE_URL=...
+   NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=...
+   CLERK_SECRET_KEY=...
+   GEMINI_API_KEY=...
+   ```
 
+4. **Run Prisma**
+   ```bash
+   npx prisma generate
+   npx prisma migrate dev --name init
+   ```
 
-## Deploy on Vercel
+5. **Start the dev server**
+   ```bash
+   npm run dev
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📌 Customization
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Add/Edit AI prompts** in `/lib/ai/` folder.
+- **Configure Inngest tasks** in `/lib/inngest/function.js`.
+- **Edit themes/components** using Tailwind and Shadcn in `/components/ui/`.
+
+## 📸 Screenshots
+
+| Resume Builder | AI Cover Letter | Trend Analysis |
+|----------------|------------------|----------------|
+| ![resume](https://via.placeholder.com/200x120) | ![cover](https://via.placeholder.com/200x120) | ![chart](https://via.placeholder.com/200x120) |
+
+## 🔐 License
+
+MIT License  
+Made with ❤️ by Pooja Kumari
