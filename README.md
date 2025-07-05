@@ -1,6 +1,6 @@
 #  AI-CareerPath — AI-Powered Career Platform  
-**Live Demo:** [ai-careerpath.vercel.app](https://ai-career-path-ef25.vercel.app/)  
-**GitHub:** [poojakumari27/ai-careerpath](https://github.com/poojakumari27/ai-careerpath)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Visit%20Site-blue?style=for-the-badge)](https://ai-career-path-ef25.vercel.app/)
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-black?style=for-the-badge&logo=github)](https://github.com/poojakumari27/ai-careerpath)
 
 ## 🚀 Overview
 
